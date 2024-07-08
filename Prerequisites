@@ -1,0 +1,8 @@
+# Prerequisites
+
+*AWS Account: Ensure you have an AWS account.
+*GitHub Repository: Have your Node.js project in a GitHub repository.
+*AWS EC2 Instance: Set up an EC2 instance with the necessary security groups.
+*Jenkins Installed: Jenkins should be installed and running on your EC2 instance.
+*Docker Installed: Docker should be installed and configured on your EC2 instance.
+*Jenkins Plugins: Install necessary Jenkins plugins (e.g., GitHub Integration, Docker Pipeline).
