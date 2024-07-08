@@ -1,0 +1,20 @@
+﻿pipeline {
+    agent any
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/Shafania/node-todo-cicd.git'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t node-app .'
+            }
+        }
+        stage('Run Docker Container') {
+            steps {
+                sh 'docker run -d --name node-todo-app -p 8000:8000 node-app'
+            }
+        }
+    }
+}
