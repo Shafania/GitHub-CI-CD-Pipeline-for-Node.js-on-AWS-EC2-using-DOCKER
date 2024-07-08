@@ -21,21 +21,6 @@ Launch the instance.
 
 ## Step 2: Set up Jenkins on AWS EC2 Instance
 Connect to EC2 Instance via SSH:
---sh
-ssh -i your-key-pair.pem ec2-user@your-ec2-public-ip
-Install Java:
-sudo apt update
-sudo apt install openjdk-11-jre
-java -version
-Install Jenkins:
-curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
-sudo apt-get update
-sudo apt-get install jenkins
-sudo systemctl enable jenkins
-sudo systemctl start jenkins
-sudo systemctl status jenkins
-sh
 
 Open Jenkins in Web Browser:
 Navigate to http://<your-ec2-public-ip>:8080.
